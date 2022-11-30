@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Style Header */
+.header{
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+#logoNav{
+    margin-left: 20px;
+    line-height: 60px;
+    color: rgb(110, 109, 109);
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navMenu{
+    display: flex;
+    margin-right: 40px;
+    line-height: 60px;
+    list-style: none;
+}
+.navMenuItem{
+    font-size: 16px;
+    margin: 0px 10px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.navMenuLink{
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+.navMenuLink:hover{
+    background-color: rgb(110, 109, 109);
+    transition: 0.5s;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Style Container main */
+.main{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#containerMain{
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+}
+/* Style column to filter */
+#columnToFilter{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 400px;
+}
+/* Style products container */
+.searchByKeyword{
+    width: auto;
+    display: flex;
+}
+.search{
+    margin: 0px auto;
+    width: 300px;
+    height: 30px;
+}
+#searchResultContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+}
+.lists{
+    list-style: none;
+}
+.selectOrderType{
+    display: flex;
+    justify-content:right;
+}
+.productCardContent{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(214, 211, 211, 0.579);
+}
+.photoContainer{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+}
+.photoProduct{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 150px;
+    height: 120px;
+}
+.infoProduct{
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.infoProduct h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.infoProduct .priceContent{
+    margin-top: 60px;
+}
+.infoProduct .priceContent .tag24Hs{
+    margin: 0px;
+}
+.infoProduct .addButtonContainer{
+    float: right;
+    margin-right: 40px;
+}
+.buttonAdd{
+    width: 150px;
+    height: 30px;
+    font-size: medium;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid rgb(110, 109, 109);
+    cursor: pointer;
+}
+.buttonAdd:hover{
+    background-color: rgb(110, 109, 109);
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Style cart */
+#cartContainer{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
+    margin: 0px auto;
+    list-style: none;
+}
+.productCardContentCart{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0px auto;
+    border-top: 1px solid rgba(214, 211, 211, 0.579);
+}
+.footerCart{
+    display: flex;
+    float: right;
+    border-top: 1px solid rgba(214, 211, 211, 0.579);
+    margin-bottom: 10px;
+}
+#buttonBuy{
+    margin-left: 20px;
+    width: 100px;
+    margin-top: 5px;
+    font-size: medium;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid rgb(110, 109, 109);
+    cursor: pointer;
+}
+.footerCart h1{
+    margin-top: 5px;
+}
+#buttonBuy:hover{
+    background-color: rgb(110, 109, 109);
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.emptyCart{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+    margin: 0px auto;
+    border-top: 1px solid rgba(214, 211, 211, 0.579);
+    border-bottom: 1px solid rgba(214, 211, 211, 0.579);
+    display: flex;
+}
+.emptyCart h3{
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+.goShopping{
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 120px;
+    height: 36px;
+    font-size: medium;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid rgb(110, 109, 109);
+    cursor: pointer;
+}
+.goShopping:hover{
+    background-color: rgb(110, 109, 109);
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+#checkout{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70%;
+    margin: 0px auto;
+    list-style: none;
+    border-top: 1px solid rgba(214, 211, 211, 0.579);
+    border-bottom: 1px solid rgba(214, 211, 211, 0.579);
+}
+.personalInformation{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.personalInformation h2{
+    margin-bottom: 5px;
+}
+.personalInformation input{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30%;
+    height: 30px;
+}
+.creditCard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.creditCard h2{
+    margin-bottom: 5px;
+}
+.creditCard input{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 30%;
+    height: 30px;
+}
+#buttonPay{
+    float: right;
+    margin-right: 20px;
+    width: 100px;
+    height: 36px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: medium;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid rgb(110, 109, 109);
+    cursor: pointer;
+}
+#buttonPay:hover{
+    background-color: rgb(110, 109, 109);
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.footer{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+.footer h2 {
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
+
+.noVisible{
+    display: none;
+}
+.white{
+    color: white;
+}
+.filterByCategory a{
+    text-decoration: none;
+    color:black;
+}
+.filterByCategory a:visited{
+    color: black;
+}
+.filterDeliveryTime a{
+    text-decoration: none;
+    color:black;
+}
+.filterDelvieryTime a:visited{
+    color: black;
+}
+.filterByPrice a{
+    text-decoration: none;
+    color:black;
+}
+.filterByPrice a:visited{
+    color: black;
+}

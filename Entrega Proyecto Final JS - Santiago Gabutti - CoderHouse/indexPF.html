@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final JS</title>
+    <link rel="stylesheet" href="/Entrega Proyecto Final JS - Santiago Gabutti - CoderHouse/stylePF.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" id="logoNav">MagicStore</a>
+            <ul class="navMenu">
+                <li class="navMenuItem">
+                    <a href="#" class="navMenuLink navLink" id="buttonAboutUs">Nosotros</a></li>
+                <li class="navMenuItem">
+                    <a href="#" class="navMenuLink navLink" id="buttonContact">Contacto</a></li>
+                <li class="navMenuItem">
+                    <a href="#" class="navMenuLink navLink" id="buttonCart">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div id="containerMain">
+            <section id="columnToFilter">
+                <div>
+                    <h3>FILTROS</h3>
+                </div>
+                <div class="filterByCategory">
+                    <h4>Categorías</h4>
+                    <ul class="lists">
+                        <li><a href="#" class="buttonCategory" id="controladores">Controladores</a></li>
+                        <li><a href="#" class="buttonCategory" id="mixers">Mixers</a></li>
+                        <li><a href="#" class="buttonCategory" id="bandejas">Bandejas</a></li>
+                        <li><a href="#" class="buttonCategory" id="auriculares">Auriculares</a></li>
+                        <li><a href="#" class="buttonCategory" id="interfaces">Interfaces de Audio</a></li>
+                        <li><a href="#" class="buttonCategory" id="monitores">Monitores y Parlantes</a></li>
+                        <li><a href="#" class="buttonCategory" id="microfonos">Microfonos</a></li>
+                        <li><a href="#" class="buttonCategory" id="sistemas">Sistemas</a></li>
+                        <li><a href="#" class="buttonCategory" id="cables">Cables y Accesorios</a></li>
+                        <li><a href="#" class="buttonCategory" id="cargadores">Pilas y Cargadores</a></li>
+                    </ul>
+                </div>
+                <div class="filterDeliveryTime">
+                    <h4>Tiempo de entrega</h4>
+                    <ul class="lists">
+                        <li><a href="#" id="delivery24Hs">Llega en menos de 24hs</a></li>
+                    </ul>
+                </div>
+                <div class="filterByPrice">
+                    <h4>Precio</h4>
+                    <ul class="lists">
+                        <li><a href="#" id="stop20">Hasta $20.000</a></li>
+                        <li><a href="#" id="between20and65">$20.000 a $65.000</a></li>
+                        <li><a href="#" id="over65">Más de $65.000</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section id="searchResultContainer">
+                <div class="searchByKeyword">
+                    <input id="search" class="search" type="text" placeholder="                         Search by keyword">
+                </div>
+                <ol id="listProducts" class="lists">
+                    <!--render js-->
+                </ol>
+            </section>
+            <div id="cartContainer" class="noVisible">
+                <ol id="listProductsInCart" class="lists">
+                    <!-- render js -->
+                </ol>
+            </div>
+            <div id="checkout" class="noVisible">
+                <!-- render checkout js -->
+            </div>
+            <div id="aboutUsContainer" class="noVisible">
+                <!-- render about us js-->
+            </div>
+            <div id="contactContainer" class="noVisible">
+                <!-- render contact js-->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h2>Proyecto Final JS - Santiago Gabutti - Coder House</h2>
+        </div>
+    </footer>
+    <script src="/Entrega Proyecto Final JS - Santiago Gabutti - CoderHouse/scriptPF.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
