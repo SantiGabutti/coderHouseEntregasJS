@@ -225,18 +225,18 @@ function Buy(parameter1) {
         personalInformation.innerHTML= `
             <h2>Información Personal</h2>
                 <div class="inputs">
-                    <input type="text" placeholder="   Name and Last Name">
-                    <input type="tel" placeholder="   Phone number">
-                    <input type="email" placeholder="   Enter your email">
+                    <input type="text" placeholder="   Name and Last Name" id="nameUserInput">
+                    <input type="tel" placeholder="   Phone number" id="telUserInput">
+                    <input type="email" placeholder="   Enter your email" id="emailUserInput">
                 </div>`
         creditCard = document.createElement('div')
         creditCard.className = `creditCard`
         creditCard.innerHTML = `
             <h2>Datos Tarjeta de Crédito</h2>
                 <div class="inputs">
-                    <input type="number" placeholder="   Card Number">
-                    <input type="tel" placeholder="   MM/YY">
-                    <input type="number" placeholder="   CVV">
+                    <input type="number" placeholder="   Card Number" id="numberCardUserInput">
+                    <input type="tel" placeholder="   MM/YY" id="expirationCardUserInput">
+                    <input type="number" placeholder="   CVV" id="cvvUserInput">
                 </div>`
         toPay = document.createElement('div')
         toPay.className = `toPay`
@@ -258,7 +258,6 @@ function clickLogo(parameter1) {
 function clickButtonCart(parameter1) {
     buttonCart.addEventListener('click', () => {
         cartContainer.className = ""
-        checkout.className = "noVisible"
         columnToFilter.className = "noVisible"
         searchResultContainer.className = "noVisible"
         aboutUsContainer.className = "noVisible"
@@ -288,21 +287,38 @@ function clickButtonGoShopping(parameter1) {
 function Pay(parameter1) {
     buttonPay = document.getElementById('buttonPay')
     buttonPay.addEventListener('click', () => {
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: '<h4 class="black">Payment completed.Thank you!</h4>',
-            showConfirmButton: false,
-            timer: 3000
-        })
-        renderProductCards(parameter1)
+        nameUserInput = document.getElementById('nameUserInput').value
+        telUserInput = document.getElementById('nameUserInput').value
+        emailUserInput = document.getElementById('nameUserInput').value
+        numberCardUserInput = document.getElementById('nameUserInput').value
+        expirationCardUserInput = document.getElementById('nameUserInput').value
+        cvvUserInput = document.getElementById('nameUserInput').value
+        if (nameUserInput == ""||numberCardUserInput == ""||expirationCardUserInput == ""||cvvUserInput == ""||nameUserInput == ""||telUserInput == ""||emailUserInput == ""){
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '<h4 class="black">Por favor vuelve a intentar!</h4>',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        } else {
+            localStorage.clear()
+            productsInCart = []
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: '<h4 class="black">Pago completado. Muchas gracias!</h4>',
+                showConfirmButton: false,
+                timer: 3000
+            })
+            renderProductCards(parameter1)
+        }
     })
 }
 //Click button about us, render brand info
 function clickButtonAboutUs() {
     buttonAboutUs.addEventListener('click', () => {
         aboutUsContainer.className = ""
-        checkout.className = "noVisible"
         cartContainer.className = "noVisible"
         columnToFilter.className = "noVisible"
         searchResultContainer.className = "noVisible"
@@ -318,7 +334,6 @@ function clickButtonContact() {
     buttonContact.addEventListener('click', () => {
         contactContainer.className = ""
         aboutUsContainer.className = "noVisible"
-        checkout.className = "noVisible"
         cartContainer.className = "noVisible"
         columnToFilter.className = "noVisible"
         searchResultContainer.className = "noVisible"
