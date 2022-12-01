@@ -210,8 +210,6 @@ function saveProductsInCartStorage() {
 function Buy(parameter1) {
     buttonBuy = document.getElementById('buttonBuy')
     buttonBuy.addEventListener('click', () => {
-        localStorage.clear()
-        productsInCart = []
         cartContainer.innerHTML = `
         <div class="emptyCart">
             <h3>You have not selected products yet</h3>
